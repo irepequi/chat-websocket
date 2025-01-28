@@ -14,28 +14,24 @@ This project is a real-time chat application using WebSocket. It allows users to
 ## Installation
 
 1. **Clone the repository**
-```bash
-git clone https://github.com/your-username/chat-websocket.git
+`git clone https://github.com/your-username/chat-websocket.git`
 
 2. **Install dependencies**
 In the project directory, install the necessary dependencies:
  
-```bash
-npm install
+`npm install`
 
 
 3. **Run the WebSocket server**
 Make sure you have Node.js and Express installed. Then, run the WebSocket server:
 
-```bash
-node server.js
+`node server.js`
 
 
 4. **Start the frontend application**
 To start the React application, navigate to the client directory and run:
 
-```bash
-npm start
+`npm start`
 
 Esto abrirá la aplicación en tu navegador por defecto.
 
