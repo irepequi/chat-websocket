@@ -6,9 +6,9 @@ This project is a real-time chat application using WebSocket. It allows users to
 
 ## Features
 
-✨ **Real-time connection**: Messages are sent and received instantly without reloading the page, thanks to WebSocket.
-💬 **Text messages**: Users can write and receive text messages in the chat.
-🔒 **Secure connection**: Although this project uses an insecure WebSocket connection (`ws://`), it is recommended to use (`wss://`) for better security in a production environment.
+<p>✨ **Real-time connection**: Messages are sent and received instantly without reloading the page, thanks to WebSocket.</p>
+<p>💬 **Text messages**: Users can write and receive text messages in the chat.</p>
+<p>🔒 **Secure connection**: Although this project uses an insecure WebSocket connection (`ws://`), it is recommended to use (`wss://`) for better security in a production environment.</p>
 
 
 ## Installation
