@@ -7,16 +7,18 @@ const Chat = () => {
   const socketRef = useRef(null);
 
 useEffect(() => {
-  // Crear la conexión WebSocket
+  // Crea la conexión WebSocket
   const socket = new WebSocket("ws://localhost:8080");
   socketRef.current = socket;
 
+  // Establece la conexión WebSocket
   socket.onopen = () => console.log("Conexión WebSocket establecida");
 
+  // Recibe y almacena los mensajes del WebSocket
   socket.onmessage = async (event) => {
     let messageData;
 
-    // Verificar si el mensaje es un Blob
+    // Verifica si el mensaje es un Blob
     if (event.data instanceof Blob) {
       messageData = await event.data.text(); // Convertir el Blob a texto
     } else {
@@ -29,14 +31,16 @@ useEffect(() => {
     ]);
   };
 
+  // Muestra cualquier error relacionado con el WebSocket
   socket.onerror = (error) => console.error("Error en WebSocket:", error);
 
+  // Muestra un mensaje cuando la conexión WebSocket se cierra
   socket.onclose = () => console.log("Conexión WebSocket cerrada");
 
-  // Cleanup
+  // Cierra la conexión WebSocket
   return () => {
     socket.close();
-    console.log("Conexión WebSocket cerrada desde cleanup");
+    console.log("Conexión WebSocket cerrada");
   };
 }, []);
 
